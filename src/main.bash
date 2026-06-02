@@ -122,7 +122,7 @@ function _devshell_atomic_make_file {
 function _devshell_get_cache_directory {
 	local -n _cache_directory=$1
 
-	_cache_directory="$(direnv_layout_dir)/devshell-direnv"
+	_cache_directory="$(direnv_layout_dir)/direnv-devshell"
 	if [[ ! -d $_cache_directory ]]; then
 		# Besides creating parent directories, we also use `-p` to avoid a race condition
 		# between multiple instances of direnv e.g. a direnv editor extension and the
@@ -186,5 +186,5 @@ function _devshell_log_error {
 		printf -v color_red_bold '%b' '\e[1m\e[31m'
 	fi
 
-	log_error "${color_red_bold}[devshell-direnv] ERROR: ${message}${color_normal}"
+	log_error "${color_red_bold}[direnv-devshell] ERROR: ${message}${color_normal}"
 }
