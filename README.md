@@ -51,8 +51,8 @@ These get appended to the command `nix build` to build the devshell. For example
 
 ```bash
 source_url \
-  'https://raw.githubusercontent.com/bigolu/direnv-devshell/0f1a452b46c183c565b6ac5f710e9ea24bf918bb/src/main.bash' \
-  'sha256-heBPLeA31k9eQvGJBKlxxkuMQXYGOOd4qyceg8aBBYQ='
+  'https://raw.githubusercontent.com/bigolu/direnv-devshell/c063e0605481ec97cfec78abd8dd9ead0746318d/src/main.bash' \
+  'sha256-J1DKZGjz/XiKz430g8pN5CZnqa7kyZ/RIlnV+rTufas='
 DEVSHELL_DIRENV_FALLBACK=true use_devshell ".#devShells.$(uname -m)-$(uname -s | tr '[:upper:]' '[:lower:]').default"
 ```
 
