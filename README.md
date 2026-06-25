@@ -53,7 +53,7 @@ These get appended to the command `nix build` to build the devshell. For example
 source_url \
   'https://raw.githubusercontent.com/bigolu/direnv-devshell/c063e0605481ec97cfec78abd8dd9ead0746318d/src/main.bash' \
   'sha256-J1DKZGjz/XiKz430g8pN5CZnqa7kyZ/RIlnV+rTufas='
-DEVSHELL_DIRENV_FALLBACK=true use_devshell ".#devShells.$(uname -m)-$(uname -s | tr '[:upper:]' '[:lower:]').default"
+DEVSHELL_DIRENV_FALLBACK=true use_devshell ".#devShells.$(nix eval --impure --raw --expr 'builtins.currentSystem').default"
 ```
 
 [devshell]: https://github.com/numtide/devshell
